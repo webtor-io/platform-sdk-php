@@ -1,0 +1,34 @@
+{
+    "name": "webtor/platform-sdk-php",
+    "type": "library",
+    "description": "SDK for online torrent streaming",
+    "keywords": ["torrent","streaming"],
+    "homepage": "https://webtor.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pavel Tatarskiy",
+            "email": "pavel.tatarsky@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "ext-grpc": "*",
+        "ext-protobuf": "*",
+        "grpc/grpc": "^1.27",
+        "firebase/php-jwt": "^5.0"
+    },
+    "scripts": {
+        "protoc": "protoc --plugin='protoc-gen-grpc=../../grpc/bins/opt/grpc_php_plugin' --grpc_out='./src' --php_out='./src' ./proto/*.proto",
+        "tests": "./vendor/bin/phpunit tests"
+    },
+    "autoload": {
+        "psr-4": {
+          "Webtor\\": "src/Webtor/",
+          "GPBMetadata\\": "src/GPBMetadata/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}
