@@ -12,7 +12,6 @@
         }
     ],
     "require": {
-        "php": ">=7.4.0",
         "ext-grpc": "*",
         "ext-protobuf": "*",
         "grpc/grpc": "^1.27",
