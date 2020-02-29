@@ -28,6 +28,7 @@ $infoHash = $sdk->torrent()->push($data);
 $url = $sdk->seeder($infoHash)->url('/Sintel/Sintel.mp4');
 echo($url);
 ```
+Full example can be found [there](https://github.com/webtor-io/platform-sdk-php-example).
 
 ## Authentication
 You don't have to provide api-keys and secrets if you host webtor-instance on your own. Just follow [this guide](https://github.com/webtor-io/helm-charts) to setup it.
