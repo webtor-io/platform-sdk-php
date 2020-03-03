@@ -5,6 +5,7 @@ Webtor.io platform SDK for online torrent streaming
 ```
 composer require webtor/platform-sdk-php
 ```
+`grpc` and `protobuf` pecl exstensions must be installed, just follow [this guide](https://grpc.io/docs/quickstart/php/)!
 
 ## Basic usage
 
