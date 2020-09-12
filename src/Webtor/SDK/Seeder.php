@@ -23,7 +23,7 @@ class Seeder
         if (isset($this->params['apiKey'])) {
             $params['api-key'] = $this->params['apiKey'];
         }
-        $url = $this->params['apiUrl'].'/'.$this->infoHash.'/'.urlencode(ltrim($path, '/')).$extra.'?'.http_build_query($params);
+        $url = $this->params['apiUrl'].'/'.$this->infoHash.'/'.rawurlencode(ltrim($path, '/')).$extra.'?'.http_build_query($params);
         return $url;
     }
 
